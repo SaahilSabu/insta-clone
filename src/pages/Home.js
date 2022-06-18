@@ -3,15 +3,8 @@ import Card from "../components/Card";
 import posts from "../data/posts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const handleClick = (code) => {
-    console.log(code);
-    navigate(`/post/${code}`);
-  };
 
   return (
     <div>
