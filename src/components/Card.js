@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ post }) => {
   const [likes, setLikes] = React.useState(post.likes);
+  const navigate = useNavigate();
 
   const handleLike = () => {
     if (post.likes === likes) {
@@ -11,6 +13,11 @@ const Card = ({ post }) => {
     }
   };
 
+  const handleClick = (code) => {
+    console.log(code);
+    navigate(`/post/${code}`);
+  };
+
   return (
     <div className="container">
       <div className="card">
@@ -18,7 +25,12 @@ const Card = ({ post }) => {
           <p>{post.code}</p>
         </div>
         <div>
-          <img alt="post" className="postImage" src={post.display_src} />
+          <img
+            alt="post"
+            className="postImage"
+            src={post.display_src}
+            onClick={() => handleClick(post.code)}
+          />
         </div>
         <div className="status">
           <div className="icons">
@@ -30,10 +42,11 @@ const Card = ({ post }) => {
             <img
               src="https://cdn4.iconfinder.com/data/icons/app-custom-ui-1/48/Chat_bubble-128.png"
               alt=""
+              onClick={() => navigate(`/post/${post.code}`)}
             />
           </div>
           <div className="likes">
-            <p>{post.likes} likes</p>
+            <p>{likes} likes</p>
           </div>
           <div className="caption">
             <span>

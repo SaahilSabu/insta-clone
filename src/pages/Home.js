@@ -17,13 +17,11 @@ const Home = () => {
     <div>
       <div className="header-container">
         <FontAwesomeIcon icon={faInstagram} size="4x" />
-        <h1 className="header" onClick={() => navigate("/")}>
-          Instagram
-        </h1>
+        <h1 className="header">Instagram</h1>
       </div>
       <div className="container">
         {posts.map((post) => (
-          <div onClick={() => handleClick(post.code)}>
+          <div>
             <Card post={post} key={post.code} />
           </div>
         ))}
