@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa;
+  font-size: 14px;
+  margin: 24px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.postImage {
+  width: 100%;
+}
+
+.username {
+  padding: 16px;
+  font-weight: 700;
+  color: #262626;
+}
+
+.username.p {
+  padding-left: 12px;
+}
+
+.icons img {
+  width: 30px;
+  margin: 10px 0px;
+  cursor: pointer;
+  padding-right: 25px;
+}
+
+.status {
+  padding: 10px 15px;
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+.likes {
+  margin-top: -5px;
+}
+
+.comments {
+  width: 500px;
+  background-color: #fff;
+  border: 1px solid rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  line-height: 50px;
+  font-size: 20px;
+  justify-content: space-between;
+}
+.comment-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.comment-input input {
+  padding: 10px;
+  display: flex;
+}
+
+.user-input {
+  flex: 1;
+}
+.text-input {
+  flex: 3;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  size: 100px;
+  margin: 20px;
+  font-family: "Oleo Script", cursive;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+}
